@@ -125,4 +125,13 @@ export class AddEmployeeComponent {
       .map((country, i) => ({ id: i + 1, ...country }))
       .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
+
+  
+  triggerFileInput(): void {
+    // document.getElementById('fileInput').click();
+    const fileInput = document.getElementById('fileInput') as HTMLInputElement | null;
+    if (fileInput) {
+      fileInput.click();
+    }
+  }
 }

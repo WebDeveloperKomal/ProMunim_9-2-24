@@ -23,7 +23,7 @@ export class AllTransactionsComponent {
   AllTransactionList: AllTransactionModel[] = [];
   currentPage: number = 1;
   countries: AllTransactionModel[] | undefined;
-  collectionSize =100;
+  collectionSize =0;
   transactionForm !: FormGroup;
   branches:BranchModel[]=[];
   showtable : boolean = false ;

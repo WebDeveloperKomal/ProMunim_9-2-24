@@ -254,4 +254,15 @@ loadEmployeeData() {
 
 
 
+
+triggerFileInput(): void {
+  // document.getElementById('fileInput').click();
+  const fileInput = document.getElementById('fileInput') as HTMLInputElement | null;
+  if (fileInput) {
+    fileInput.click();
+  }
+}
+
+
+
 }

@@ -5,8 +5,8 @@ import{HttpClient} from '@angular/common/http'
 })
 export class ApiService {
   
-  baseUrl="https://clientportal.promunim.com/auth";
-  // baseUrl="http://localhost:8181/auth";
+  // baseUrl="https://clientportal.promunim.com/auth";
+  baseUrl="http://localhost:8181/auth";
   
   constructor(private http : HttpClient) { }
 
@@ -1050,6 +1050,14 @@ updateAccWritting(writing: any , accDocumentImage:File): any {  //running
 
   changestatus(changestatus: any): any { //Not running
     return this.http.put(`${this.baseUrl}/change-status`, changestatus);
+  }
+  
+  replayByID(id: number): any { // running    
+    return this.http.get(`${this.baseUrl}/get-complaints-details/` + id);
+  }
+
+  replay(replay: any): any {  //running
+    return this.http.post(`${this.baseUrl}/save-complaint-reply`, replay);
   }
 
 

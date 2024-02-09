@@ -3,6 +3,7 @@
 .navbar{
     background-color: #3BB161;
     position: relative;
+    border-bottom: 2px solid #004C8C;
    
 }
 
@@ -76,4 +77,17 @@ header {
 
 .dropdown-item{
     cursor: pointer;
+    color: white;
 }
+.dropdown-item:hover{
+ background-color: #003974;
+}
+
+
+
+:host {
+     position: fixed;
+     width: 100%;
+     z-index: 1000;
+  }
+  

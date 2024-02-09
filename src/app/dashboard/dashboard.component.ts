@@ -14,6 +14,9 @@ export class DashboardComponent {
   activeTab2: string = 'tab9';
   activeTab3: string = 'tab13';
   activeTab4: string = 'tab17';
+  shownewsalert : boolean = false ;
+  showcustomerinteraction  : boolean = false;
+  showleadnotification : boolean = false;
   allCustCounts={
     yearCust: 0,
     portfolio: 0,
@@ -60,6 +63,15 @@ export class DashboardComponent {
 
   constructor(private apiService:ApiService){}
   
+  newsalert(){
+    this.shownewsalert = !this.shownewsalert ;
+  }
+  customerIntraction(){
+    this.showcustomerinteraction = !this.showcustomerinteraction
+  }
+  leadnotification(){
+    this.showleadnotification = !this.showleadnotification
+  }
 
 changeTab(tabId: string) {
   this.activeTab = tabId;
